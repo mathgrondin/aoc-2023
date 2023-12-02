@@ -26,12 +26,11 @@ function getLineNumber(line) {
 
 }
 
-async function main() {
-    const inputFilePath = './input.txt';
+export default async function main() {
+    const inputFilePath = process.cwd() + '\\1\\input.txt';
     const fileStream = fs.readFileSync(inputFilePath).toString('utf-8');
     const allLines = fileStream.split("\n");
     const allLineValues = allLines.map(getLineNumber);
     const sum = allLineValues.reduce((sum, current) => sum + current)
     console.log(sum)
 }
-main();
