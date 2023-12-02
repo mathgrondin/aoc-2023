@@ -1,4 +1,4 @@
-import main from "./2/index.js"
+import main from "./4/index.js"
 
 async function run() {
     await main();
